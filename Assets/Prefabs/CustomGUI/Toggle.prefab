@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &6475866962924525635
+--- !u!1 &1360878886907049788
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,8 +8,8 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4764186401578291092}
-  - component: {fileID: 8293240111656026128}
+  - component: {fileID: 7922558963589041521}
+  - component: {fileID: 7253181905811678397}
   m_Layer: 0
   m_Name: Toggle
   m_TagString: Untagged
@@ -17,41 +17,40 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4764186401578291092
+--- !u!4 &7922558963589041521
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6475866962924525635}
-  serializedVersion: 2
+  m_GameObject: {fileID: 1360878886907049788}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8293240111656026128
+--- !u!114 &7253181905811678397
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6475866962924525635}
+  m_GameObject: {fileID: 1360878886907049788}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3539e89e218a3a240b511d9522833688, type: 3}
+  m_Script: {fileID: 11500000, guid: 14cd9c631202b8d4abd84490c7364ef1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   guiPos:
-    ScreenAlignmentType: 2
-    WidgetAlignmentType: 2
+    screen_Alignment_Type: 4
+    control_Center_Alignment_Type: 4
     pos: {x: 0, y: 0}
-    width: 100
-    height: 100
+    width: 60
+    height: 20
   content:
-    m_Text: 
+    m_Text: Toggle
     m_Image: {fileID: 0}
     m_Tooltip: 
   style:

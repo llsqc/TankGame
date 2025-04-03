@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &5399094236098594480
+--- !u!1 &6484793801204884148
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,8 +8,8 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 6285442824323208649}
-  - component: {fileID: 5683602201303455996}
+  - component: {fileID: 6484793801204884151}
+  - component: {fileID: 6484793801204884150}
   m_Layer: 0
   m_Name: Label
   m_TagString: Untagged
@@ -17,41 +17,40 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &6285442824323208649
+--- !u!4 &6484793801204884151
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5399094236098594480}
-  serializedVersion: 2
+  m_GameObject: {fileID: 6484793801204884148}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5683602201303455996
+--- !u!114 &6484793801204884150
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5399094236098594480}
+  m_GameObject: {fileID: 6484793801204884148}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 18b572f698c0a4f48a2880112577c099, type: 3}
+  m_Script: {fileID: 11500000, guid: 7f646f78efe8bb04ab822327ff706ad6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   guiPos:
-    ScreenAlignmentType: 2
-    WidgetAlignmentType: 2
+    screen_Alignment_Type: 5
+    control_Center_Alignment_Type: 5
     pos: {x: 0, y: 0}
     width: 100
-    height: 100
+    height: 50
   content:
-    m_Text: 
+    m_Text: Label
     m_Image: {fileID: 0}
     m_Tooltip: 
   style:

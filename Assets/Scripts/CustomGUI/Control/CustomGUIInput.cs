@@ -1,27 +1,26 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class CustomGUIInput : CustomGUIBase
+public class CustomGUIInput : CustomGUIControl
 {
     public event UnityAction<string> textChange;
 
     private string oldStr = "";
-
-    protected override void StyleOnDraw()
+    protected override void StyleOffDraw()
     {
-        content.text = GUI.TextField(guiPos.Pos, content.text, style);
-        if (oldStr != content.text)
+        content.text = GUI.TextField(guiPos.Pos, content.text);
+        if(oldStr != content.text)
         {
             textChange?.Invoke(oldStr);
             oldStr = content.text;
         }
     }
 
-    protected override void StyleOffDraw()
+    protected override void StyleOnDraw()
     {
-        content.text = GUI.TextField(guiPos.Pos, content.text);
+        content.text = GUI.TextField(guiPos.Pos, content.text, style);
         if (oldStr != content.text)
         {
             textChange?.Invoke(oldStr);

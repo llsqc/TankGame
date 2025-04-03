@@ -1,56 +1,60 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public enum E_SliderType
+public enum E_Slider_Type
 {
     Horizontal,
-    Vertical
+    Vertical,
 }
 
-public class CustomGUISlider : CustomGUIBase
+public class CustomGUISlider : CustomGUIControl
 {
+    //最小值
     public float minValue = 0;
+    //最大值
     public float maxValue = 1;
+    //当前值
     public float nowValue = 0;
-
-    public E_SliderType sliderType = E_SliderType.Horizontal;
-
+    //水平还是竖直样式
+    public E_Slider_Type type = E_Slider_Type.Horizontal;
+    //小按钮的 style
     public GUIStyle styleThumb;
 
     public event UnityAction<float> changeValue;
 
     private float oldValue = 0;
 
-    protected override void StyleOnDraw()
+    protected override void StyleOffDraw()
     {
-        switch (sliderType)
+        switch (type)
         {
-            case E_SliderType.Horizontal:
-                nowValue = GUI.HorizontalSlider(guiPos.Pos, nowValue, minValue, maxValue, style, styleThumb);
+            case E_Slider_Type.Horizontal:
+                nowValue = GUI.HorizontalSlider(guiPos.Pos, nowValue, minValue, maxValue);
                 break;
-            case E_SliderType.Vertical:
-                nowValue = GUI.VerticalSlider(guiPos.Pos, nowValue, minValue, maxValue, style, styleThumb);
+            case E_Slider_Type.Vertical:
+                nowValue = GUI.VerticalSlider(guiPos.Pos, nowValue, minValue, maxValue);
                 break;
         }
 
-        if (oldValue != nowValue)
+        if(oldValue != nowValue)
         {
             changeValue?.Invoke(nowValue);
             oldValue = nowValue;
         }
+        
     }
 
-    protected override void StyleOffDraw()
+    protected override void StyleOnDraw()
     {
-        switch (sliderType)
+        switch (type)
         {
-            case E_SliderType.Horizontal:
-                nowValue = GUI.HorizontalSlider(guiPos.Pos, nowValue, minValue, maxValue);
+            case E_Slider_Type.Horizontal:
+                nowValue = GUI.HorizontalSlider(guiPos.Pos, nowValue, minValue, maxValue, style, styleThumb);
                 break;
-            case E_SliderType.Vertical:
-                nowValue = GUI.VerticalSlider(guiPos.Pos, nowValue, minValue, maxValue);
+            case E_Slider_Type.Vertical:
+                nowValue = GUI.VerticalSlider(guiPos.Pos, nowValue, minValue, maxValue, style, styleThumb);
                 break;
         }
 
