@@ -17,7 +17,8 @@ public class BeginPanel : BasePanel<BeginPanel>
 
         btnSetting.clickEvent += () =>
         {
-            //GameManager.Instance.ChangeScene("SettingScene");
+            SettingPanel.Instance.ShowMe();
+            HideMe();
         };
 
         btnQuit.clickEvent += () => { Application.Quit(); };
