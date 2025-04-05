@@ -36,7 +36,7 @@ public class SettingPanel : BasePanel<SettingPanel>
         HideMe();
     }
 
-    public void UpdatePanelInfo()
+    private void UpdatePanelInfo()
     {
         MusicData musicData = GameDataMgr.Instance.musicData;
 
