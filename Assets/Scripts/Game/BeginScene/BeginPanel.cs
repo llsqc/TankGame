@@ -25,7 +25,8 @@ public class BeginPanel : BasePanel<BeginPanel>
 
         btnRank.clickEvent += () =>
         {
-            //GameManager.Instance.ChangeScene("RankScene");
+            RankPanel.Instance.ShowMe();
+            HideMe();
         };
     }
 }
