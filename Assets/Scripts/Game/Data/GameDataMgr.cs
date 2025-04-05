@@ -44,6 +44,7 @@ public class GameDataMgr
     public void OpenCloseMusic(bool isOpen)
     {
         musicData.isMusicOn = isOpen;
+        BKMusic.Instance.ChangeOpen(isOpen);
         PlayerPrefsDataMgr.Instance.SaveData(musicData, "Music");
     }
 
@@ -56,6 +57,7 @@ public class GameDataMgr
     public void ChangeMusicVolume(float volume)
     {
         musicData.musicVolume = volume;
+        BKMusic.Instance.ChangeValue(volume);
         PlayerPrefsDataMgr.Instance.SaveData(musicData, "Music");
     }
 
