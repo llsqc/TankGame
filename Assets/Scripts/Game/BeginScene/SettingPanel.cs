@@ -29,7 +29,6 @@ public class SettingPanel : BasePanel<SettingPanel>
             HideMe();
             if (SceneManager.GetActiveScene().name == "BeginScene")
             {
-                //让开始面板重新显示出来
                 BeginPanel.Instance.ShowMe();
             }
         };
@@ -51,5 +50,11 @@ public class SettingPanel : BasePanel<SettingPanel>
     {
         base.ShowMe();
         UpdatePanelInfo();
+    }
+
+    public override void HideMe()
+    {
+        base.HideMe();
+        Time.timeScale = 1;
     }
 }
