@@ -7,6 +7,8 @@ public class PlayerObj : TankBaseObj
 {
     public WeaponObj nowWeapon;
 
+    public Transform weaponPos;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -43,5 +45,17 @@ public class PlayerObj : TankBaseObj
     {
         base.Wound(other);
         GamePanel.Instance.UpdateHP(maxHP, hp);
+    }
+
+    public void SetWeapon(GameObject weapon)
+    {
+        if (nowWeapon)
+        {
+            Destroy(nowWeapon.gameObject);
+        }
+
+        GameObject weaponObj = Instantiate(weapon, weaponPos, false);
+        nowWeapon = weaponObj.GetComponent<WeaponObj>();
+        nowWeapon.SetOwner(this);
     }
 }
