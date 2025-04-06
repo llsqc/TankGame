@@ -1,9 +1,12 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerObj : TankBaseObj
 {
+    public WeaponObj nowWeapon;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -16,7 +19,7 @@ public class PlayerObj : TankBaseObj
         transform.Rotate(Vector3.up * (Input.GetAxis("Horizontal") * (roundSpeed * Time.deltaTime)));
 
         tankHead.transform.Rotate(Vector3.up * (Input.GetAxis("Mouse X") * (headRoundSpeed * Time.deltaTime)));
-        
+
         if (Input.GetMouseButtonDown(0))
         {
             Fire();
@@ -25,7 +28,10 @@ public class PlayerObj : TankBaseObj
 
     public override void Fire()
     {
-        throw new System.NotImplementedException();
+        if (nowWeapon)
+        {
+            nowWeapon.Fire();
+        }
     }
 
     public override void Dead()
