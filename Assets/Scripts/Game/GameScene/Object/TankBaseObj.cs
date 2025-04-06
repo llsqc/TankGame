@@ -9,6 +9,8 @@ public abstract class TankBaseObj : MonoBehaviour
     public int maxHP;
     public int def;
 
+    public Transform tankHead;
+
     public float moveSpeed = 10;
     public float roundSpeed = 100;
     public float headRoundSpeed = 100;
