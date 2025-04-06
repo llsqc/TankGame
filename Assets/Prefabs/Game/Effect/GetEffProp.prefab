@@ -9655,6 +9655,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7826805489026686743}
   - component: {fileID: 966163422507644576}
+  - component: {fileID: -3264529490864435517}
   m_Layer: 0
   m_Name: GetEffProp
   m_TagString: Untagged
@@ -9774,3 +9775,16 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &-3264529490864435517
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4913799404141490382}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aaa9440b4a7a1fe469125cbc9a68d00a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  time: 2
