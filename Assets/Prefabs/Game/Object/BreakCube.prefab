@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7525788589257525763}
   - component: {fileID: 6591138080493315005}
   m_Layer: 0
-  m_Name: Block_2x2
+  m_Name: BreakCube
   m_TagString: Cube
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

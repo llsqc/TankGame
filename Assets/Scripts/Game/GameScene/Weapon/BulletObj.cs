@@ -10,7 +10,7 @@ public class BulletObj : MonoBehaviour
     public TankBaseObj owner;
 
     public GameObject effObj;
-    
+
     // Start is called before the first frame update
     void Start()
     {
@@ -24,8 +24,16 @@ public class BulletObj : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Cube"))
+        if (other.gameObject.CompareTag("Cube") ||
+            other.gameObject.CompareTag("Player") && owner.gameObject.CompareTag("Monster") ||
+            other.gameObject.CompareTag("Monster") && owner.gameObject.CompareTag("Player"))
         {
+            TankBaseObj otherObj = other.GetComponent<TankBaseObj>();
+            if (otherObj)
+            {
+                otherObj.Wound(owner);
+            }
+            
             if (effObj)
             {
                 GameObject eff = Instantiate(effObj, transform.position, transform.rotation);
@@ -33,11 +41,11 @@ public class BulletObj : MonoBehaviour
                 audioSource.volume = GameDataMgr.Instance.musicData.soundVolume;
                 audioSource.mute = !GameDataMgr.Instance.musicData.isSoundOn;
             }
-            
+
             Destroy(gameObject);
         }
     }
-    
+
     public void SetOwner(TankBaseObj obj)
     {
         owner = obj;
