@@ -13,6 +13,8 @@ public class BeginPanel : BasePanel<BeginPanel>
 
     void Start()
     {
+        Cursor.lockState = CursorLockMode.Confined;
+        
         btnBegin.clickEvent += () => { SceneManager.LoadScene("GameScene"); };
 
         btnSetting.clickEvent += () =>

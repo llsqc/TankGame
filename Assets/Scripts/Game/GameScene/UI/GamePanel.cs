@@ -33,9 +33,6 @@ public class GamePanel : BasePanel<GamePanel>
             QuitPanel.Instance.ShowMe();
             Time.timeScale = 0;
         };
-        
-        AddScore(100);
-        UpdateHP(100, 30);
     }
 
     void Update()
@@ -43,7 +40,7 @@ public class GamePanel : BasePanel<GamePanel>
         nowTime += Time.deltaTime;
         labTime.content.text = "";
         time = (int)nowTime;
-        
+
         if (time >= 3600)
         {
             labTime.content.text += $"{time / 3600}时";

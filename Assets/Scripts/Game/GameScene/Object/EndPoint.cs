@@ -8,9 +8,8 @@ public class EndPoint : MonoBehaviour
 {
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player"))
-        {
-            SceneManager.LoadScene("BeginScene");
-        }
+        if (!other.CompareTag("Player")) return;
+        Time.timeScale = 0;
+        WinPanel.Instance.ShowMe();
     }
 }
