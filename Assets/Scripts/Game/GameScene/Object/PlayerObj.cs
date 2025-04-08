@@ -21,7 +21,7 @@ public class PlayerObj : TankBaseObj
         transform.Rotate(Vector3.up * (Input.GetAxis("Horizontal") * (roundSpeed * Time.deltaTime)));
 
         //暂时修改
-        tankHead.transform.Rotate(Vector3.up * (Input.GetAxis("Mouse X") * (headRoundSpeed * Time.deltaTime) * 10));
+        tankHead.transform.Rotate(Vector3.up * (Input.GetAxis("Mouse X") * (headRoundSpeed * Time.deltaTime) * 5));
 
         if (Input.GetMouseButtonDown(0))
         {
