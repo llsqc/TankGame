@@ -7,8 +7,7 @@ public class LosePanel : BasePanel<LosePanel>
 {
     public CustomGUIButton btnBack;
     public CustomGUIButton btnContinue;
-    
-    // Start is called before the first frame update
+
     void Start()
     {
         btnBack.clickEvent += () =>
@@ -23,11 +22,5 @@ public class LosePanel : BasePanel<LosePanel>
         };
         
         HideMe();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }

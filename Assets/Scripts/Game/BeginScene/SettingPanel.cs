@@ -12,8 +12,7 @@ public class SettingPanel : BasePanel<SettingPanel>
     public CustomGUIToggle toggleSound;
 
     public CustomGUIButton btnClose;
-
-    // Start is called before the first frame update
+    
     void Start()
     {
         sliderMusic.changeValue += (value) => GameDataMgr.Instance.ChangeMusicVolume(value);

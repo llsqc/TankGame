@@ -26,8 +26,6 @@ public class RankPanel : BasePanel<RankPanel>
             BeginPanel.Instance.ShowMe();
         };
 
-        //GameDataMgr.Instance.AddRankInfo("test", 100, 9000);
-
         HideMe();
     }
 

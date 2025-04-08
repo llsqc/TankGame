@@ -14,16 +14,6 @@ public class BasePanel<T> : MonoBehaviour where T : class
         _instance = this as T;
     }
 
-    // Start is called before the first frame update
-    void Start()
-    {
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-    }
-
     public virtual void ShowMe()
     {
         this.gameObject.SetActive(true);
